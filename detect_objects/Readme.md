@@ -5,6 +5,8 @@ GoogleのVisionAPI使って、物体を認識してそれを矩形で囲って�
 ちょっとVisionAPI使うまでが面倒だけど、まぁ今後使うことはなさそうでしょう。  
   
 ## Demo
+バナナの物体名が、「Fruit」と「Food」で重なってしまっていますね。  
+こういう時、確信度の低いほうを削除する機能を追加したほうが見栄えはいいかもしれません。
 ![result](https://github.com/PythonHuro/ocha/blob/master/detect_objects/Output.jpg)
   
 ## Description
