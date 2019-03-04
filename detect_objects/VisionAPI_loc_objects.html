@@ -11781,13 +11781,13 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">io</span>
 <span class="kn">from</span> <span class="nn">PIL</span> <span class="k">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">ImageDraw</span><span class="p">,</span> <span class="n">ImageFont</span>
-<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;GOOGLE_APPLICATION_CREDENTIALS&quot;</span><span class="p">]</span><span class="o">=</span> <span class="s2">&quot;***/***/***.json&quot;</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;GOOGLE_APPLICATION_CREDENTIALS&quot;</span><span class="p">]</span><span class="o">=</span> <span class="s2">&quot;C:***/***/***.json&quot;</span>
 </pre></div>
 
 </div>
@@ -11811,7 +11811,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">draw_rectangle</span><span class="p">(</span><span class="n">draw</span><span class="p">,</span> <span class="n">coordinates</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
@@ -11842,7 +11842,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">localize_objects</span><span class="p">(</span><span class="n">file_path</span><span class="p">):</span>
@@ -11880,19 +11880,19 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">draw_objects</span><span class="p">(</span><span class="n">objects</span><span class="p">,</span> <span class="n">file_path</span><span class="p">,</span> <span class="n">savefile_path</span><span class="o">=</span><span class="s1">&#39;Output.jpg&#39;</span><span class="p">):</span>
     
     <span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
     <span class="n">draw</span> <span class="o">=</span> <span class="n">ImageDraw</span><span class="o">.</span><span class="n">Draw</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
-    <span class="n">fnt</span> <span class="o">=</span> <span class="n">ImageFont</span><span class="o">.</span><span class="n">truetype</span><span class="p">(</span><span class="s1">&#39;resource/yasashisa.ttf&#39;</span><span class="p">,</span><span class="mi">60</span><span class="p">)</span>
+    <span class="n">fnt</span> <span class="o">=</span> <span class="n">ImageFont</span><span class="o">.</span><span class="n">truetype</span><span class="p">(</span><span class="s1">&#39;resource/yasashisa.ttf&#39;</span><span class="p">,</span><span class="mi">30</span><span class="p">)</span>
     
     <span class="k">for</span> <span class="n">object_</span> <span class="ow">in</span> <span class="n">objects</span><span class="p">:</span>
         <span class="n">vects_normalized</span> <span class="o">=</span> <span class="n">object_</span><span class="o">.</span><span class="n">bounding_poly</span><span class="o">.</span><span class="n">normalized_vertices</span>
         <span class="n">vects</span> <span class="o">=</span> <span class="p">((</span><span class="n">vects_normalized</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">x</span> <span class="o">*</span> <span class="n">img</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">vects_normalized</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">y</span> <span class="o">*</span> <span class="n">img</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">1</span><span class="p">]),(</span><span class="n">vects_normalized</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">x</span> <span class="o">*</span> <span class="n">img</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">vects_normalized</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">y</span> <span class="o">*</span> <span class="n">img</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
-        <span class="n">outline_width</span> <span class="o">=</span> <span class="mi">10</span>
+        <span class="n">outline_width</span> <span class="o">=</span> <span class="mi">5</span>
         <span class="n">outline_color</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span>
         
         <span class="n">draw_rectangle</span><span class="p">(</span><span class="n">draw</span><span class="p">,</span> <span class="n">vects</span><span class="p">,</span> <span class="n">outline_color</span><span class="p">,</span> <span class="n">outline_width</span><span class="p">)</span>
@@ -11915,16 +11915,51 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#128013;&#29289;&#20307;&#12434;&#22258;&#12416;&#30697;&#24418;&#12391;&#20999;&#12426;&#20986;&#12375;">&#128013;&#29289;&#20307;&#12434;&#22258;&#12416;&#30697;&#24418;&#12391;&#20999;&#12426;&#20986;&#12375;<a class="anchor-link" href="#&#128013;&#29289;&#20307;&#12434;&#22258;&#12416;&#30697;&#24418;&#12391;&#20999;&#12426;&#20986;&#12375;">&#182;</a></h3><ul>
+<li>save_name(保存される名前)には、'物体名'、'信頼度'を含めている。信頼度がないと、同じ物体が2つ画像上にあるときに、重複して保存されてしまう。</li>
+<li>矩形を描画する前に行わないと、描画された矩形が切り取り画像に入ってしまってなんか嫌な感じになる。</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">crop_objects</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">objects</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">object_</span> <span class="ow">in</span> <span class="n">objects</span><span class="p">:</span>
+        
+        <span class="n">vects_normalized</span> <span class="o">=</span> <span class="n">object_</span><span class="o">.</span><span class="n">bounding_poly</span><span class="o">.</span><span class="n">normalized_vertices</span>
+        <span class="n">vects</span> <span class="o">=</span> <span class="p">((</span><span class="n">vects_normalized</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">x</span> <span class="o">*</span> <span class="n">image</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">vects_normalized</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">y</span> <span class="o">*</span> <span class="n">image</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">1</span><span class="p">]),(</span><span class="n">vects_normalized</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">x</span> <span class="o">*</span> <span class="n">image</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">vects_normalized</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">y</span> <span class="o">*</span> <span class="n">image</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+        
+        <span class="n">object_name</span> <span class="o">=</span> <span class="n">object_</span><span class="o">.</span><span class="n">name</span>
+        <span class="n">object_score</span> <span class="o">=</span> <span class="n">object_</span><span class="o">.</span><span class="n">score</span>
+        <span class="n">save_name</span> <span class="o">=</span> <span class="s1">&#39;save/</span><span class="si">{}</span><span class="s1">_</span><span class="si">{}</span><span class="s1">.png&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">object_name</span><span class="p">,</span> <span class="n">object_score</span><span class="p">)</span>
+        
+        <span class="n">image</span><span class="o">.</span><span class="n">crop</span><span class="p">((</span><span class="n">vects</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">vects</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">vects</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">vects</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]))</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">save_name</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="&#128013;&#20197;&#19979;&#12289;&#23455;&#34892;&#37096;&#20998;">&#128013;&#20197;&#19979;&#12289;&#23455;&#34892;&#37096;&#20998;<a class="anchor-link" href="#&#128013;&#20197;&#19979;&#12289;&#23455;&#34892;&#37096;&#20998;">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">file_path</span> <span class="o">=</span> <span class="s1">&#39;resource/objects.jpg&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">file_path</span> <span class="o">=</span> <span class="s1">&#39;resource/good_objects.png&#39;</span>
 </pre></div>
 
 </div>
@@ -11934,7 +11969,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">objects</span> <span class="o">=</span> <span class="n">localize_objects</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
@@ -11947,13 +11982,48 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># オブジェクトを切り散る関数</span>
+<span class="c1"># これは矩形を描画する前に行わないと、描画された矩形が切り取り画像に入ってしまってなんか嫌な感じになる。</span>
+
+<span class="n">image</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+<span class="n">crop_objects</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">objects</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">draw_objects</span><span class="p">(</span><span class="n">objects</span><span class="p">,</span> <span class="n">file_path</span><span class="p">)</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Saved Output.jpg
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
