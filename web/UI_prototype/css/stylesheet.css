@@ -1,0 +1,52 @@
+:root {
+	--container-width: 48%;
+	--container-height: 48%;
+}
+
+html {
+	height: 100%;
+	background-color: #FFFAF0;
+}
+
+body {
+	max-width: 1200px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.main-container {
+	height: 100%;
+	background-color: #99bbee;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.container {
+	width: var(--container-width);
+	height: var(--container-height);
+	margin: auto;
+	border-radius: 10px;
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+	opacity: 0.8;
+}
+
+.container1 {
+	background-color: red;
+}
+
+.container2 {
+	background-color: blue;
+}
+
+.container3 {
+	background-color: green;
+}
+
+.container4 {
+	background-color: white;
+}
+
+.container-son {
+	margin: 10px;
+	background-color: yellow;
+}
